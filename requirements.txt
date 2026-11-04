@@ -1,18 +1,46 @@
-# requirements.txt
-langchain>=1.0
-langchain-classic>=1.0  # MultiVectorRetriever. langchain 1.x에서 분리됨 (필수)
-langchain-openai
-langchain-community
-langchain-chroma
-langchain-experimental
-langchain-ollama
-unstructured[all-docs]
-pillow
-pydantic
-lxml
-matplotlib
-chromadb
-tiktoken
-python-dotenv
-ipykernel
-jupyterlab
+# ─────────────────────────────────────────────
+# LangChain - LLM 및 RAG 파이프라인 구성
+# ─────────────────────────────────────────────
+
+langchain>=1.0              # LLM 애플리케이션 개발 프레임워크 | 모델·도구·에이전트를 연결하여 AI 서비스 구현 | AI 서비스의 전체 흐름을 구성하는 도구
+langchain-classic>=1.0      # 기존 LangChain 체인 및 검색기 제공 | MultiVectorRetriever 등 기존 기능 사용 | LangChain 1.x에서 분리된 이전 기능을 사용할 수 있도록 지원
+langchain-openai            # OpenAI 모델 연동 라이브러리 | GPT 및 OpenAI 임베딩 모델을 LangChain에서 사용 | OpenAI 모델을 LangChain 코드에서 쉽게 호출하도록 연결
+langchain-community         # 외부 서비스·데이터 연동 라이브러리 | 다양한 문서 로더와 외부 도구 연결 | 여러 외부 라이브러리와 데이터를 LangChain에서 사용하도록 지원
+langchain-chroma            # 임베딩 기반 벡터 검색 엔진 연동 | Chroma 벡터 DB를 LangChain에서 사용하여 유사 문서 검색 | LangChain과 Chroma를 연결하는 도구
+langchain-experimental      # 실험적 기능 제공 라이브러리 | 정식 기능으로 확정되지 않은 체인 및 기능 사용 | 새롭게 개발 중인 기능을 미리 사용하도록 지원
+langchain-ollama            # 로컬 오픈소스 AI 모델 연동 | Ollama에서 실행하는 Llama 등 모델을 LangChain과 연결 | 내 컴퓨터에서 실행하는 AI 모델을 LangChain에서 사용하도록 지원
+
+
+# ─────────────────────────────────────────────
+# 문서 및 이미지 처리
+# ─────────────────────────────────────────────
+
+unstructured[all-docs]      # 비정형 문서 분석 및 파싱 | PDF·Word·이미지 등에서 텍스트·제목·표 등의 요소 추출 | 여러 형식의 문서를 구조화된 요소로 구분하여 처리하는 라이브러리
+unstructured-inference>=1.6.12,<2.0.0  # 문서 레이아웃 분석 | PDF·이미지에서 제목·표·본문 등의 영역 탐지 | 문서의 어느 부분이 제목이고 표인지 등을 구분하는 데 사용
+pillow                      # 이미지 처리 라이브러리 | 이미지 열기·크기 변경·자르기·형식 변환 | Python에서 이미지 파일을 다루고 수정하는 도구
+pydantic                    # 데이터 구조 및 타입 검증 | LLM 응답을 정해진 형식으로 검사하고 관리 | 데이터가 미리 정한 규칙과 형식에 맞는지 확인하는 도구
+lxml                        # HTML·XML 문서 파싱 라이브러리 | 문서 구조를 분석하고 필요한 데이터 추출 | HTML이나 XML의 태그 구조를 분석하여 원하는 정보를 가져오는 도구
+matplotlib                  # 데이터 시각화 라이브러리 | 그래프·차트 생성 및 이미지 출력 | 숫자나 분석 결과를 그래프로 보여주는 도구
+
+
+# ─────────────────────────────────────────────
+# 벡터 데이터베이스 및 토큰 처리
+# ─────────────────────────────────────────────
+
+chromadb                    # 임베딩 기반 벡터 검색 엔진 | 문서 벡터 저장·관리 및 의미적 유사도 검색 | 문장을 숫자 벡터로 저장하고 의미가 비슷한 내용을 찾아주는 데이터베이스
+tiktoken                    # 토큰 계산 라이브러리 | 텍스트의 토큰 수 계산 및 모델 입력 길이 관리 | AI 모델이 처리하는 텍스트의 토큰 개수를 계산하는 도구
+
+
+# ─────────────────────────────────────────────
+# 환경변수 관리
+# ─────────────────────────────────────────────
+
+python-dotenv               # 환경변수 관리 라이브러리 | .env 파일에서 API 키와 환경설정 값 불러오기 | API 키 등을 코드에 직접 작성하지 않고 별도 파일에서 관리하도록 지원
+
+
+# ─────────────────────────────────────────────
+# Jupyter Notebook 실행 환경
+# ─────────────────────────────────────────────
+
+ipykernel                   # Jupyter Python 실행 커널 | 가상환경의 Python을 노트북에서 실행 | Jupyter Notebook에서 선택한 Python 환경으로 코드를 실행하도록 연결
+jupyterlab                  # 웹 기반 대화형 개발 환경 | 노트북에서 코드 작성·실행 및 결과 확인 | 코드를 셀 단위로 실행하고 결과를 바로 확인할 수 있는 개발 환경
