@@ -16,6 +16,10 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
+# pk1 파일
+processed/
+*.pk1
+
 # 에디터
 .vscode/
 .idea/
