@@ -2,6 +2,14 @@
 
 PDF의 텍스트·표·이미지를 함께 활용해 질문에 답하는 프로젝트입니다.
 
+## 원본 데이터
+
+- **자료:** 질병관리청 『손상예방과 건강한 안전사회』 2022년 4호
+- **원본 PDF:** [질병관리청에서 다운로드](https://www.kdca.go.kr/sites/kdca/download/safeSociety/2022/2022%2B4%ED%98%B8.pdf)
+- **사용 방법:** 다운로드한 PDF를 `data/document.pdf`로 저장합니다.
+
+아래 Before / After는 이전 자료로 실행한 결과입니다.
+
 ## 1. Before / After
 
 **질문**

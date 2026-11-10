@@ -37,7 +37,7 @@ def categorize_elements(raw_pdf_elements):
     return texts, tables
 
 if __name__ == "__main__":
-    raw_pdf_elements = extract_pdf_elements(DATA_DIR, "invest.pdf")
+    raw_pdf_elements = extract_pdf_elements(DATA_DIR, "document.pdf")
     texts, tables = categorize_elements(raw_pdf_elements)
 
     # 텍스트를 토큰 기준으로 분할
